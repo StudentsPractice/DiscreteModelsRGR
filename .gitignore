@@ -1,0 +1,8 @@
+target/**
+.settings/**
+.idea/**
+
+InternetShop.iml
+.project
+.classpath
+
