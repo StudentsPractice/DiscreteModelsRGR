@@ -9,9 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	
-    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="<c:url value="/css/common.css"/>">
-    <link rel="stylesheet" type="text/css" href="<c:url value="/css/main.css"/>">
     
 </head>
 
@@ -19,20 +17,30 @@
 	<header>
 		<nav class="navbar navbar-inverse">
 		    <div class="container-fluid">
-		        <div class="navbar-header"> <a class="navbar-brand" href="/">Дискретні моделі в САПР</a> </div>
-		        <ul class="nav navbar-nav">
-		            <li>
-						<a class="" href="#">Лабораторна</a>
-					</li>
-		        </ul>
+		        <div class="navbar-header"> 
+		        	<a class="navbar-brand" href="<c:url value="/"/>">Дискретні моделі в САПР</a> 
+		        </div>
 		    </div>
 		</nav>
 	</header>
 	
 	<main class="container-fluid">
-		
-	
-	</main>
+	    <div class="form-container">
+	    	<h1>Алгоритм Едмондса-Карпа</h1>
+	        <form method="post" enctype="multipart/form-data" class="file-form">
+	        	<div class="input-group">
+		            <label class="btn btn-default" for="my-file-selector">
+					    <input type="file" id="my-file-selector" name="inputFile" style="display:none" onchange="$('#upload-file-info').html(this.files[0].name)">
+					    Виберіть файл
+					</label>
+					<span class='label label-default' id="upload-file-info"></span>
+	            </div>
+	            <div class="input-group">
+	            	<button class="btn btn-success" type="submit">Надіслати</button>
+	            </div>
+	        </form>
+		</div>
+    </main>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
